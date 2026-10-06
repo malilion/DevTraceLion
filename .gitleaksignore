@@ -1,0 +1,6 @@
+# Historical gitleaks findings that are test fixtures, not real secrets.
+# Fixtures were rewritten so new scans don't flag them; these lines cover old commits.
+73783cd2de6857039d3adda5474bd973a722094a:tests/unit/redact-secrets.spec.ts:jwt:180
+73783cd2de6857039d3adda5474bd973a722094a:tests/unit/redact-secrets.spec.ts:stripe-access-token:173
+73783cd2de6857039d3adda5474bd973a722094a:tests/unit/redact-secrets.spec.ts:stripe-access-token:193
+73783cd2de6857039d3adda5474bd973a722094a:tests/unit/redact-secrets.spec.ts:stripe-access-token:195
