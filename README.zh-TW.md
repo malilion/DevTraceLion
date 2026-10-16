@@ -17,7 +17,7 @@
     <img src="https://github.com/malilion/DevTraceLion/actions/workflows/ci.yml/badge.svg" alt="CI 狀態" />
   </a>
   <a href="LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="授權條款: MIT" />
+    <img src="https://img.shields.io/badge/License-Apache--2.0-blue.svg" alt="授權條款: Apache-2.0" />
   </a>
   <img src="https://img.shields.io/badge/權限需求-零權限%20(Zero)-emerald.svg" alt="零權限" />
   <img src="https://img.shields.io/badge/儲存空間-僅限記憶體-blue.svg" alt="僅限記憶體" />
@@ -241,5 +241,5 @@ pnpm assets:store
 
 ## 📄 授權條款 (License)
 
-DevTrace Lion 採用 [MIT 授權條款](LICENSE) 開源。  
+DevTrace Lion 採用 [Apache License 2.0 授權條款](LICENSE) 開源。  
 Part of the **Malilion Browser Tools** ecosystem.

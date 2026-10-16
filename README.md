@@ -17,7 +17,7 @@
     <img src="https://github.com/malilion/DevTraceLion/actions/workflows/ci.yml/badge.svg" alt="CI Status" />
   </a>
   <a href="LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License: MIT" />
+    <img src="https://img.shields.io/badge/License-Apache--2.0-blue.svg" alt="License: Apache-2.0" />
   </a>
   <img src="https://img.shields.io/badge/Permissions-Zero%20Required-emerald.svg" alt="Zero Permissions" />
   <img src="https://img.shields.io/badge/Storage-Session%20Memory%20Only-blue.svg" alt="Session Memory Only" />
@@ -241,5 +241,5 @@ Contributions are welcome! Please check out [CONTRIBUTING.md](CONTRIBUTING.md) f
 
 ## 📄 License
 
-DevTrace Lion is open-source software licensed under the [MIT License](LICENSE).  
+DevTrace Lion is open-source software licensed under the [Apache License 2.0](LICENSE).  
 Part of the **Malilion Browser Tools** ecosystem.
