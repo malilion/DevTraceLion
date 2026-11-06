@@ -31,7 +31,7 @@ export function toCSharp(record: NetworkRecord): string {
   lines.push(`using var request = new HttpRequestMessage(new HttpMethod("${method}"), "${url}");`);
 
   for (const [k, v] of headers) {
-    const escapedV = v.replace(/"/g, '\\"');
+    const escapedV = v.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
     lines.push(`request.Headers.TryAddWithoutValidation("${k}", "${escapedV}");`);
   }
 

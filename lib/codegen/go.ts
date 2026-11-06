@@ -39,7 +39,7 @@ export function toGo(record: NetworkRecord): string {
   // Headers
   for (const [k, v] of Object.entries(record.requestHeaders)) {
     if (!k.startsWith(':')) {
-      const escapedV = v.replace(/"/g, '\\"');
+      const escapedV = v.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
       lines.push(`    req.Header.Set("${k}", "${escapedV}")`);
     }
   }
