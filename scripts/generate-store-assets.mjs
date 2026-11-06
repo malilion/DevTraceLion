@@ -27,9 +27,15 @@ const mimeTypes = {
 };
 
 const server = http.createServer((req, res) => {
-  let reqPath = req.url.split('?')[0];
+  let reqPath = decodeURIComponent((req.url || '/').split('?')[0]);
   if (reqPath === '/' || reqPath === '') reqPath = '/panel.html';
-  const filePath = path.join(outputDir, reqPath);
+  const root = path.resolve(outputDir);
+  const filePath = path.resolve(root, '.' + path.normalize('/' + reqPath.replace(/^\/+/, '')));
+  if (!filePath.startsWith(root + path.sep) && filePath !== root) {
+    res.writeHead(400, { 'Content-Type': 'text/plain' });
+    res.end('Bad request');
+    return;
+  }
 
   if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
     const ext = path.extname(filePath).toLowerCase();

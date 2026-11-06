@@ -22,7 +22,7 @@ export function toPhp(record: NetworkRecord): string {
   const headerList: string[] = [];
   for (const [k, v] of Object.entries(record.requestHeaders)) {
     if (!k.startsWith(':')) {
-      const escapedV = v.replace(/"/g, '\\"');
+      const escapedV = v.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
       headerList.push(`        "${k}: ${escapedV}",`);
     }
   }
@@ -35,7 +35,7 @@ export function toPhp(record: NetworkRecord): string {
 
   // Body
   if (record.requestBody?.captured && record.requestBody.text) {
-    const escaped = record.requestBody.text.replace(/"/g, '\\"');
+    const escaped = record.requestBody.text.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
     curlOptions.push(`    CURLOPT_POSTFIELDS => "${escaped}",`);
   }
 
